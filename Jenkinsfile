@@ -1,3 +1,4 @@
+chmod +x scripts/hello.sh
 pipeline {
     agent any
     stages {
