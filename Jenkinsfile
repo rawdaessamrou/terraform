@@ -3,8 +3,10 @@ pipeline {
     stages {
         stage('Run Script') {
             steps {
-                // Use sh for Linux or bat for Windows
-                chmod +x scripts/hello.sh
+                // Ensure the script is executable first
+                sh 'chmod +x scripts/hello.sh'
+                
+                // Then execute it
                 sh './scripts/hello.sh'
             }
         }
