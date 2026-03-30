@@ -1,14 +1,10 @@
 pipeline {
     agent any
     stages {
-        stage('Hello Stage 1') {
+        stage('Run Script') {
             steps {
-                echo 'Hello from Stage 1'
-            }
-        }
-        stage('Hello Stage 2') {
-            steps {
-                echo 'Hello from Stage 2'
+                // Use sh for Linux or bat for Windows
+                sh './scripts/hello.sh'
             }
         }
     }
